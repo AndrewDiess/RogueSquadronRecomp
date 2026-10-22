@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Launcher background: procedurally generated starfield and planet (original artwork for this project). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498.45 461.13">
+  <circle cx="430" cy="470" r="250" style="fill: #ffffff; fill-opacity: 0.55;"/>
+  <circle cx="455" cy="490" r="250" style="fill: #000000; fill-opacity: 0.35;"/>
+  <ellipse cx="430" cy="470" rx="330" ry="46" transform="rotate(-18 430 470)" style="fill: none; stroke: #ffffff; stroke-width: 5; stroke-opacity: 0.8;"/>
+  <circle cx="229.5" cy="254.3" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="271.4" cy="118.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="392.2" cy="25.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="146.2" cy="239.4" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="154.8" cy="404.3" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="2.5" cy="97.4" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="249.9" cy="13.9" r="3.4" style="fill: #ffffff;"/>
+  <path d="M236.5 13.9 L263.3 13.9 M249.9 0.4 L249.9 27.3" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="168.8" cy="344.6" r="3.1" style="fill: #ffffff;"/>
+  <path d="M156.4 344.6 L181.1 344.6 M168.8 332.2 L168.8 356.9" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="471.5" cy="187.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="307.4" cy="71.0" r="3.5" style="fill: #ffffff;"/>
+  <path d="M293.4 71.0 L321.4 71.0 M307.4 57.0 L307.4 85.0" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="308.0" cy="235.0" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="153.5" cy="242.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="102.3" cy="449.4" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="487.9" cy="11.8" r="3.2" style="fill: #ffffff;"/>
+  <path d="M475.0 11.8 L500.8 11.8 M487.9 -1.1 L487.9 24.7" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="225.9" cy="190.3" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="160.1" cy="24.3" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="131.6" cy="155.2" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="105.7" cy="151.1" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="106.0" cy="313.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="264.7" cy="256.0" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="412.8" cy="65.8" r="3.3" style="fill: #ffffff;"/>
+  <path d="M399.6 65.8 L425.9 65.8 M412.8 52.7 L412.8 78.9" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="271.3" cy="119.8" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="122.6" cy="367.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="97.1" cy="430.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="264.7" cy="55.3" r="3.4" style="fill: #ffffff;"/>
+  <path d="M251.3 55.3 L278.1 55.3 M264.7 41.8 L264.7 68.7" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="216.3" cy="222.1" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="489.2" cy="188.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="117.6" cy="60.3" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="272.3" cy="138.8" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="79.4" cy="242.0" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="94.6" cy="62.6" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="320.1" cy="227.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="28.2" cy="237.8" r="3.4" style="fill: #ffffff;"/>
+  <path d="M14.7 237.8 L41.6 237.8 M28.2 224.3 L28.2 251.3" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="143.6" cy="230.9" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="401.8" cy="25.3" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="179.0" cy="330.4" r="2.9" style="fill: #ffffff;"/>
+  <path d="M167.6 330.4 L190.5 330.4 M179.0 318.9 L179.0 341.8" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="2.0" cy="79.8" r="3.0" style="fill: #ffffff;"/>
+  <path d="M-10.1 79.8 L14.1 79.8 M2.0 67.7 L2.0 91.9" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="26.8" cy="24.9" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="48.5" cy="361.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="190.0" cy="53.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="445.7" cy="36.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="58.4" cy="435.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="24.9" cy="128.0" r="3.6" style="fill: #ffffff;"/>
+  <path d="M10.4 128.0 L39.3 128.0 M24.9 113.6 L24.9 142.5" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="303.1" cy="102.9" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="383.0" cy="56.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="150.0" cy="233.9" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="235.4" cy="44.7" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="91.6" cy="187.5" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="76.1" cy="458.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="73.2" cy="441.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="63.8" cy="308.5" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="258.8" cy="233.6" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="249.1" cy="6.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="430.2" cy="193.1" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="45.0" cy="259.5" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="119.2" cy="68.7" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="317.4" cy="100.8" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="68.9" cy="302.6" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="329.9" cy="122.6" r="2.9" style="fill: #ffffff;"/>
+  <path d="M318.3 122.6 L341.6 122.6 M329.9 110.9 L329.9 134.2" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="363.8" cy="68.9" r="3.4" style="fill: #ffffff;"/>
+  <path d="M350.4 68.9 L377.3 68.9 M363.8 55.5 L363.8 82.4" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="241.3" cy="111.1" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="173.8" cy="200.5" r="3.6" style="fill: #ffffff;"/>
+  <path d="M159.3 200.5 L188.3 200.5 M173.8 186.0 L173.8 215.0" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="368.9" cy="150.2" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="239.0" cy="193.3" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="358.3" cy="53.3" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="430.4" cy="102.2" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="483.6" cy="133.3" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="160.7" cy="209.3" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="262.4" cy="75.9" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="493.0" cy="68.3" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="185.5" cy="204.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="179.2" cy="123.2" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="141.1" cy="212.5" r="3.1" style="fill: #ffffff;"/>
+  <path d="M128.7 212.5 L153.5 212.5 M141.1 200.1 L141.1 224.8" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="333.1" cy="207.4" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="189.7" cy="113.7" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="321.0" cy="14.8" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="416.3" cy="56.2" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="431.6" cy="160.0" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="180.3" cy="289.4" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="8.6" cy="432.0" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="30.6" cy="267.1" r="3.5" style="fill: #ffffff;"/>
+  <path d="M16.8 267.1 L44.5 267.1 M30.6 253.2 L30.6 281.0" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="296.4" cy="139.7" r="3.1" style="fill: #ffffff;"/>
+  <path d="M284.0 139.7 L308.7 139.7 M296.4 127.3 L296.4 152.0" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="288.2" cy="155.1" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="202.9" cy="20.1" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="399.4" cy="131.8" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="398.2" cy="33.3" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="191.3" cy="9.1" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="76.9" cy="16.4" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="347.0" cy="209.4" r="3.1" style="fill: #ffffff;"/>
+  <path d="M334.7 209.4 L359.4 209.4 M347.0 197.0 L347.0 221.7" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="463.8" cy="57.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="235.4" cy="304.4" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="15.7" cy="174.2" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="462.9" cy="109.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="234.5" cy="191.7" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="417.6" cy="69.3" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="118.3" cy="57.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="402.0" cy="2.2" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="79.0" cy="339.3" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="454.1" cy="1.7" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="169.8" cy="25.0" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="306.7" cy="205.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="235.5" cy="53.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="352.0" cy="58.8" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="219.9" cy="259.6" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="267.6" cy="131.6" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="11.0" cy="178.0" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="250.8" cy="71.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="201.2" cy="78.5" r="3.0" style="fill: #ffffff;"/>
+  <path d="M189.2 78.5 L213.2 78.5 M201.2 66.5 L201.2 90.5" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="388.8" cy="181.1" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="166.0" cy="337.8" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="455.8" cy="200.7" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="32.8" cy="49.3" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="24.4" cy="384.6" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="132.4" cy="237.1" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="489.9" cy="25.3" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="142.4" cy="429.1" r="3.0" style="fill: #ffffff;"/>
+  <path d="M130.2 429.1 L154.5 429.1 M142.4 417.0 L142.4 441.3" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="491.4" cy="137.7" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="281.9" cy="58.9" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="151.5" cy="281.6" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="171.4" cy="110.2" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="268.0" cy="134.2" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="198.1" cy="252.4" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="411.5" cy="112.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="39.1" cy="95.5" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="471.0" cy="2.9" r="3.3" style="fill: #ffffff;"/>
+  <path d="M457.8 2.9 L484.2 2.9 M471.0 -10.3 L471.0 16.1" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="244.6" cy="92.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="275.4" cy="76.2" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="396.3" cy="1.6" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="310.0" cy="223.0" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="249.0" cy="252.9" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="0.3" cy="72.9" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="211.0" cy="10.1" r="3.1" style="fill: #ffffff;"/>
+  <path d="M198.4 10.1 L223.6 10.1 M211.0 -2.5 L211.0 22.7" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="130.3" cy="445.0" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="21.8" cy="457.2" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="261.0" cy="230.5" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="469.2" cy="10.4" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="154.0" cy="343.6" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="302.4" cy="63.1" r="3.1" style="fill: #ffffff;"/>
+  <path d="M290.1 63.1 L314.7 63.1 M302.4 50.8 L302.4 75.4" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="114.1" cy="122.0" r="3.0" style="fill: #ffffff;"/>
+  <path d="M101.9 122.0 L126.2 122.0 M114.1 109.8 L114.1 134.1" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="173.9" cy="72.9" r="3.7" style="fill: #ffffff;"/>
+  <path d="M158.9 72.9 L188.8 72.9 M173.9 57.9 L173.9 87.8" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="234.2" cy="125.4" r="2.8" style="fill: #ffffff;"/>
+  <path d="M222.9 125.4 L245.5 125.4 M234.2 114.1 L234.2 136.7" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="396.2" cy="112.7" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="31.1" cy="356.7" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="114.8" cy="142.2" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="447.5" cy="125.7" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="146.5" cy="338.1" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="131.3" cy="54.7" r="2.8" style="fill: #ffffff;"/>
+  <path d="M120.0 54.7 L142.6 54.7 M131.3 43.4 L131.3 66.0" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="131.3" cy="423.7" r="3.7" style="fill: #ffffff;"/>
+  <path d="M116.5 423.7 L146.2 423.7 M131.3 408.9 L131.3 438.5" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="65.5" cy="264.9" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="196.8" cy="337.8" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="139.9" cy="348.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="176.5" cy="334.0" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="148.6" cy="71.2" r="3.5" style="fill: #ffffff;"/>
+  <path d="M134.8 71.2 L162.5 71.2 M148.6 57.4 L148.6 85.1" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="182.6" cy="312.3" r="2.8" style="fill: #ffffff;"/>
+  <path d="M171.3 312.3 L193.9 312.3 M182.6 301.0 L182.6 323.6" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="316.8" cy="32.6" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="221.2" cy="185.5" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="259.3" cy="245.9" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="386.1" cy="101.7" r="2.9" style="fill: #ffffff;"/>
+  <path d="M374.5 101.7 L397.8 101.7 M386.1 90.1 L386.1 113.4" style="stroke: #ffffff; stroke-width: 1;"/>
+  <circle cx="142.1" cy="205.5" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="323.4" cy="82.2" r="1.1" style="fill: #ffffff;"/>
+  <circle cx="172.3" cy="326.6" r="1.8" style="fill: #ffffff;"/>
+  <circle cx="468.0" cy="19.2" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="326.6" cy="37.7" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="374.0" cy="220.0" r="1.4" style="fill: #ffffff;"/>
+  <circle cx="152.6" cy="336.4" r="0.9" style="fill: #ffffff;"/>
+  <circle cx="97.8" cy="245.4" r="2.4" style="fill: #ffffff;"/>
+  <circle cx="409.1" cy="205.9" r="0.9" style="fill: #ffffff;"/>
+</svg>
