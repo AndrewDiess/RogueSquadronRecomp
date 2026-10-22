@@ -18,6 +18,10 @@ Rogue Squadron are trademarks of their respective owners.
 - Audio runs the game's own audio microcode, translated with RSPRecomp, including its GSM speech decoding.
 - Rumble works on controllers that support it.
 
+## Download
+Windows builds are on the [Releases](https://github.com/AndrewDiess/RogueSquadronRecomp/releases) page. Extract the
+zip, run `RogueSquadronRecompiled.exe` and select your ROM.
+
 ## Required game version
 Star Wars: Rogue Squadron (USA) (Rev 1), 16 MB, SHA-1 `c12e1c6fb47a67da463c50b705ec682ec24ae80d`.
 

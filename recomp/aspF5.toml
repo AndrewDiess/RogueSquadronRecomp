@@ -1,0 +1,13 @@
+# RSPRecomp config for Rogue Squadron's audio microcode (Factor 5 / MusyX).
+# Run from the repository root with your ROM saved as baserom.z64 there: RSPRecomp recomp\aspF5.toml
+# The OSTask's ucode text pointer is 0x8008DFF0 (ROM 0x8EBF0); libultra's rspboot loads it at
+# IMEM 0x1080. The code ends at IMEM 0x1FBC (CPU code follows in the ROM). Indirect jumps are
+# only returns through saved $ra copies ($30, $8), which RSPRecomp covers with the jal return
+# addresses, so no extra targets are listed.
+# The output is derived from the ROM: it goes into the gitignored rsp/ folder.
+text_offset = 0x8EBF0
+text_size = 0xF3C
+text_address = 0x04001080
+rom_file_path = "../baserom.z64"
+output_file_path = "../rsp/aspF5.cpp"
+output_function_name = "aspF5"

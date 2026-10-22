@@ -1,29 +1,32 @@
 # Building
 
-The build needs your own ROM of the game (US version 1.1, see README.md). Everything derived from it (the
-recompiled code, the translated audio microcode) is generated locally and is never committed.
-
-Currently some inputs live in the companion analysis project (`swrs`): the N64Recomp config `recomp\swrs.toml`
-with its symbol file `build\swrs.syms.toml` (made by `tools\make_symbols.py`), the RSPRecomp config
-`recomp\aspF5.toml` and the build script `tools\build_runtime.ps1`.
+You need your own ROM of the game: Star Wars: Rogue Squadron (USA) (Rev 1), 16 MB, big-endian `.z64`, SHA-1
+`c12e1c6fb47a67da463c50b705ec682ec24ae80d`. Everything derived from it (the recompiled code, the translated audio
+microcode) is generated locally and is never committed.
 
 ## Requirements (Windows)
 - Visual Studio 2022 with the C++ workload and the "C++ Clang Compiler for Windows" component (clang-cl).
 - CMake and Ninja (both come with Visual Studio).
-- Python 3.
-- N64Recomp and RSPRecomp, built from https://github.com/N64Recomp/N64Recomp.
+- N64Recomp and RSPRecomp, built from https://github.com/N64Recomp/N64Recomp (this release was made with commit
+  `ffb39cd`).
 
 ## Steps
-1. Clone this repository with its submodules (`git clone --recurse-submodules`). `lib/rt64` and
-   `lib/N64ModernRuntime` come from forks with this port's branches (`swrs-mit` and `swrs`).
-2. Recompile the game code: run N64Recomp with `recomp\swrs.toml` (it reads the ROM and the symbol file) and put
-   the output in `RecompiledFuncs\`.
-3. Translate the audio microcode: run RSPRecomp with `recomp\aspF5.toml`, which writes `rsp\aspF5.cpp`.
-4. Configure and build with clang-cl and Ninja (RelWithDebInfo), e.g. with `tools\build_runtime.ps1 -Configure`
-   from the `swrs` project, or:
+1. Clone this repository with its submodules:
    ```
-   cmake -S . -B ..\swrs-recomp-build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl
-   cmake --build ..\swrs-recomp-build
+   git clone --recurse-submodules https://github.com/AndrewDiess/RogueSquadronRecomp.git
    ```
-   from a Visual Studio x64 developer prompt with VS's LLVM `bin` folder at the front of `PATH`.
-5. Run `RogueSquadronRecompiled.exe` from the build folder and select your ROM in the launcher.
+   `lib/rt64` and `lib/N64ModernRuntime` come from forks with this port's branches (`swrs-mit` and `swrs`).
+2. Save your ROM as `baserom.z64` in the repository root.
+3. Recompile the game code from the repository root: `N64Recomp recomp\swrs.toml`. This writes `RecompiledFuncs\`.
+4. Translate the audio microcode: `RSPRecomp recomp\aspF5.toml`. This writes `rsp\aspF5.cpp`.
+5. From a Visual Studio x64 developer prompt, with VS's LLVM folder
+   (`...\VC\Tools\Llvm\x64\bin`) at the front of `PATH`:
+   ```
+   cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl
+   cmake --build build
+   ```
+6. Run `build\RogueSquadronRecompiled.exe` and select your ROM in the launcher.
+
+The `recomp\` folder holds the inputs: `swrs.toml` (N64Recomp config, including a few instruction patches and
+hooks explained in its comments), `swrs.syms.toml` (function addresses, sizes and names) and `aspF5.toml`
+(RSPRecomp config for the audio microcode).

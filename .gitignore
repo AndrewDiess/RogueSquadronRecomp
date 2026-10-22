@@ -33,6 +33,7 @@ build*/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
+!tools/release/
 [Rr]eleases/
 x64/
 x86/

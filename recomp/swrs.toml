@@ -1,0 +1,144 @@
+# N64Recomp config for Star Wars: Rogue Squadron (US V1.1).
+# Run from the repository root with your ROM saved as baserom.z64 there: N64Recomp recomp\swrs.toml
+# Paths are relative to this file. swrs.syms.toml holds function addresses, sizes and names only. The output
+# (RecompiledFuncs/, gitignored) is derived from the ROM's code and is never committed.
+
+[input]
+entrypoint = 0x80000400
+symbols_file_path = "swrs.syms.toml"
+rom_file_path = "../baserom.z64"
+output_func_path = "../RecompiledFuncs"
+# Emits TRACE_ENTRY() at each function start; the runtime's include/trace.h makes it a call
+# counter that is off unless switched on (bring-up aid).
+trace_mode = true
+
+# `cache 0x0D` (Create Dirty Exclusive) reserves a D-cache line without reading memory.
+# These functions then overwrite each reserved line completely (or, for func_80095030,
+# don't rely on its contents), so on a PC the instruction is a no-op. N64Recomp can't
+# translate `cache`, so replace each one with nop (0x00000000).
+[[patches.instruction]]
+func = "clear_mem"  # memory clear, 16 bytes per loop
+vram = 0x8000041C
+value = 0x00000000
+[[patches.instruction]]
+func = "func_800137D0"  # builds a 0x40-byte matrix into 4 reserved lines
+vram = 0x800137D8
+value = 0x00000000
+[[patches.instruction]]
+func = "func_800137D0"
+vram = 0x800137DC
+value = 0x00000000
+[[patches.instruction]]
+func = "func_800137D0"
+vram = 0x800137E0
+value = 0x00000000
+[[patches.instruction]]
+func = "func_800137D0"
+vram = 0x800137E4
+value = 0x00000000
+[[patches.instruction]]
+func = "func_80013944"  # memcpy, aligned 16-byte blocks
+vram = 0x8001399C
+value = 0x00000000
+[[patches.instruction]]
+func = "func_80095030"  # reserves lines over a range, nothing else (in a delay slot)
+vram = 0x80095040
+value = 0x00000000
+
+# Hand-written functions that save $ra in another register around a `jal` and return
+# through it. In recompiled code $ra is never set (calls are C calls), so that register
+# is 0 and N64Recomp's indirect jump fails. Return through $ra instead (= C return).
+[[patches.instruction]]
+func = "func_800137D0"  # addu $t9, $ra, $zero ... jr $t9
+vram = 0x800138A8
+value = 0x03E00008      # jr $t9 -> jr $ra
+
+# Busy-wait loops: the runtime can't preempt a spinning thread, so give the loop a yield
+# point (swrs_spin_wait_yield in the runtime project's src/swrs/swrs_game.cpp).
+[[patches.hook]]
+func = "func_8003AB80"  # terrain patch selection: widen the view pyramid's horizontal half-width (float at
+before_vram = 0x8003AD34  # sp+0x40) by the Expand factor, after it is scaled to the draw distance so the forward reach stays as in 4:3
+text = "swrs_terrain_widen(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_8000D58C"  # bring-up: terrain object emitter, log object and patch count (SWRS_TERRAIN_LOG)
+before_vram = 0x8000D58C
+text = "swrs_log_terrain(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_8005A8D4"  # box-vs-view test: projected x for the "a corner is on screen" check
+before_vram = 0x8005AA94
+text = "swrs_cull_narrow_x(rdram, ctx, 6);"
+
+[[patches.hook]]
+func = "func_8005A8D4"  # box-vs-view test: corner x after the 4/3 scaling, before the edge tests
+before_vram = 0x8005AAE0
+text = "swrs_cull_narrow_x(rdram, ctx, 2);"
+
+[[patches.hook]]
+func = "func_8001780C"  # object visibility test: widen the horizontal limit (aspect loaded from 0x8010C438)
+before_vram = 0x80017A60  # with the Expand aspect ratio, so objects in the extended side area are drawn
+text = "swrs_cull_widen(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_8001780C"  # same test, point (no radius) path
+before_vram = 0x80017D34
+text = "swrs_cull_widen(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_8008106C"  # audio: waits for the halfword at 0x80135312 to count down to 0
+before_vram = 0x80081098
+text = "swrs_spin_wait_yield(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_8008DAE0"  # audio "all voices idle?" query; polled in 10 loops of the form
+before_vram = 0x8008DAE0  # stop_all_sounds(); while (!all_idle()) {} (main 8005B310, ovl1 x9)
+text = "swrs_spin_wait_yield(rdram, ctx); if (swrs_test_audio_idle()) { ctx->r2 = 1; return; }"
+
+[[patches.hook]]
+func = "func_8008FC94"  # stops sound channel 0, then waits for its busy byte at 0x80145D20
+before_vram = 0x8008FCC0  # to clear (reached when picking a craft, before the mission loads)
+text = "swrs_spin_wait_yield(rdram, ctx);"
+
+# The overlays share vram 0x800960E0. Tell the runtime which one is loaded so function
+# pointers into it (thread entries, callbacks) resolve (swrs_register_overlay).
+[[patches.hook]]
+func = "load_overlay"
+before_vram = 0x800012D0
+text = "swrs_register_overlay(rdram, ctx);"
+
+# Bring-up logging (swrs_game.cpp): job polling and DMA job requests.
+[[patches.hook]]
+func = "func_800075F4"
+before_vram = 0x80007628
+text = "swrs_log_job_poll(rdram, ctx);"
+
+[[patches.hook]]
+func = "ovl1_func_800AF450"
+before_vram = 0x800AF4C8
+text = "swrs_log_fe_slots(rdram, ctx);"
+
+# Front-end picture worker: wait until the front end has read a job's reply before the
+# next job reuses the reply message (swrs_wait_reply_consumed; fixes the black picture box
+# on SELECT GAME).
+[[patches.hook]]
+func = "ovl1_func_800A4780"
+before_vram = 0x800A4944
+text = "swrs_wait_reply_consumed(rdram, ctx);"
+
+[[patches.hook]]
+func = "func_80005DCC"
+before_vram = 0x80005DCC
+text = "swrs_log_dma_enqueue(rdram, ctx);"
+
+# func_800918A0, func_80091994 and func_80091C14 below are the hand-written GSM speech
+# decoder (bltzal/bal/jalr tricks); the runtime project translates them by hand in
+# src/swrs/swrs_gsm.cpp.
+
+# --- ignored functions (tools/recomp_loop.py) ---
+[patches]
+ignored = [
+    "func_800918A0",  # branches into non-code at 8009198C (Unhandled instruction: scd)
+    "func_80091994",  # branches into non-code at 80091A48 (No function found for jal target: 0x8334B334)
+    "func_80091C14",  # branches into non-code at 80091E0C (Unhandled branch in static_0_80091E0C at 0x80091E1C to 0x80091E4C)
+]
